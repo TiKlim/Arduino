@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "AnonEngineering / Shiela Marie Geducos",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": -337.4, "left": 573.6, "attrs": {} },
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": -233.4,
+      "left": 193.4,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "board-ili9341-cap-touch",
+      "id": "lcd1",
+      "top": -200.84,
+      "left": 575.62,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -349.2,
+      "left": 579.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -303.25,
+      "left": 604.8,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "lcd1:VCC", "red", [ "v3.8", "h-19.1", "v-172.8", "h345.6", "v364.8" ] ],
+    [ "uno:GND.1", "lcd1:GND", "black", [ "h38.4", "v288.3", "h163.2" ] ],
+    [ "lcd1:MOSI", "uno:11", "green", [ "v57.6", "h-144", "v-268.8", "h-124.8" ] ],
+    [ "lcd1:SCK", "uno:13", "orange", [ "v-19.2", "h-182.4", "v-211.6" ] ],
+    [ "uno:10", "lcd1:CS", "purple", [ "h57.6", "v211.9", "h153.6" ] ],
+    [ "uno:8", "lcd1:RST", "#8f4814", [ "v0.4", "h86.4", "v201.6", "h134.4" ] ],
+    [ "uno:9", "lcd1:D/C", "cyan", [ "h48", "v221.6", "h211.2" ] ],
+    [ "uno:A4", "lcd1:SDA", "green", [ "v4.2", "h-19.1", "v48", "h153.6", "v124.8", "h364.8" ] ],
+    [ "lcd1:SCL", "uno:A5", "orange", [ "v38.4", "h-374.4", "v-76.8", "h-115.3" ] ],
+    [ "uno:GND.1", "bb1:2t.e", "black", [ "h57.6", "v-134.1" ] ],
+    [ "bb1:9t.e", "uno:2", "green", [ "v19.2", "h-211.2", "v235.9" ] ],
+    [ "led1:A", "bb1:3t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:2t.c", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:3t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:9t.d", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
