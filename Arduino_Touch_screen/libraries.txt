@@ -1,0 +1,8 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+Adafruit ILI9341
+Adafruit GFX Library
+Adafruit TFTLCD Library
+Adafruit TouchScreen
+Adafruit FT6206 Library
